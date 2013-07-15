@@ -1,0 +1,2 @@
+class WashroomStatesController < ApplicationController
+end

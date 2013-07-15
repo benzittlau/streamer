@@ -1,0 +1,2 @@
+module WashroomStatesHelper
+end
