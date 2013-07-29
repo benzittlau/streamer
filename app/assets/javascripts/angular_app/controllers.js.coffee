@@ -1,4 +1,11 @@
-@WashroomCtrl = ($scope, Washrooms) ->
-  $scope.washrooms = Washrooms.query()
+@WashroomCtrl = ($scope, $timeout, Washrooms) ->
+  $scope.washrooms = []
 
-  $scope.test = 'hi'
+  (update = ->
+    washroom_update = Washrooms.query(->
+      $scope.washrooms = washroom_update
+      $timeout update, 1000
+    )
+
+
+    )()

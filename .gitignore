@@ -4,6 +4,7 @@ log/*.log
 *.log
 /tmp/
 doc/
+*.swo
 *.swp
 *~
 .DS_Store
