@@ -11,5 +11,5 @@
     )
     )()
 
-WashroomCtrl.$inject = ['$scope', '$timeout', 'Washrooms'];
+WashroomCtrl.$inject = ['$scope', '$timeout', 'Washrooms']
 
