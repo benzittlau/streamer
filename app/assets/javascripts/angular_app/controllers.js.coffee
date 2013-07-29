@@ -9,3 +9,6 @@
       $scope.washrooms = washroom_update
     )
     )()
+
+WashroomCtrl.$inject = ['$scope', '$timeout', 'Washrooms'];
+
