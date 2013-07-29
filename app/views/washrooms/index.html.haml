@@ -1,2 +1,5 @@
-%p{:'ng-repeat' => 'washroom in washrooms'}
-  Washroom {{washroom.name}} is {{washroom.state}}
+%div{:'ng-repeat' => 'washroom in washrooms'}
+  %div{:'ng-show' => 'isOpen(washroom)'}
+    Washroom {{washroom.name}} is open
+  %div{:'ng-show' => '!isOpen(washroom)'}
+    Washroom {{washroom.name}} is closed
