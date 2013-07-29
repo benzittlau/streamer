@@ -42,6 +42,6 @@ end
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
-gem "less"
-gem "therubyracer"
 gem 'angularjs-rails'
+
+gem 'bootstrap-sass', '~> 2.3.2.1'

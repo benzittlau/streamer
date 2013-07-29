@@ -1,5 +1,11 @@
-%div{:'ng-repeat' => 'washroom in washrooms'}
-  %div{:'ng-show' => 'isOpen(washroom)'}
-    Washroom {{washroom.name}} is open
-  %div{:'ng-show' => '!isOpen(washroom)'}
-    Washroom {{washroom.name}} is closed
+.container-fluid
+  .row-fluid
+    .span6{:'ng-repeat' => 'washroom in washrooms'}
+      %div.state.open{:'ng-show' => 'isOpen(washroom)'}
+        %div
+          %i.icon-thumbs-up.indicator
+          {{washroom.name}} washroom is available
+      %div.state.closed{:'ng-show' => '!isOpen(washroom)'}
+        %div
+          %i.icon-thumbs-down.indicator
+          {{washroom.name}} washroom is occupado 
