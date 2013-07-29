@@ -44,3 +44,4 @@ gem "haml-rails"
 gem "jquery-rails"
 gem "less"
 gem "therubyracer"
+gem 'angularjs-rails'

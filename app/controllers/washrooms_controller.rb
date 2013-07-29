@@ -1,6 +1,12 @@
 class WashroomsController < ApplicationController
   def index
     @washrooms = Washroom.all
+
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @washrooms }
+      format.json { render :json => @washrooms, :methods => [:state] }
+    end
   end
 
   def open

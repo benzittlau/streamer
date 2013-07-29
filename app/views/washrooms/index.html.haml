@@ -1,3 +1,2 @@
--@washrooms.each do |washroom|
-  %p Washroom #{washroom.name} is #{washroom.state}
-
+%p{:'ng-repeat' => 'washroom in washrooms'}
+  Washroom {{washroom.name}} is {{washroom.state}}
