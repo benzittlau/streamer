@@ -8,7 +8,7 @@
   (update = ->
     washroom_update = Washrooms.query(->
       $scope.washrooms = washroom_update
-      $timeout update, 1000
+      #$timeout update, 1000
     )
     )()
 
