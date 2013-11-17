@@ -18,6 +18,6 @@ class Washroom < ActiveRecord::Base
   end
 
   def commit_to_firebase
-    Firebase.update("washrooms/#{id}", { :state => state })
+    Firebase.update("washrooms/#{name}", { :state => state , :id => id, :name => name})
   end
 end

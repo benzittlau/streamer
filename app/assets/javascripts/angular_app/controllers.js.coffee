@@ -1,16 +1,14 @@
-@WashroomCtrl = ($scope, $timeout, Washrooms) ->
+@WashroomCtrl = ($scope, $timeout, angularFire) ->
   $scope.washrooms = []
+
+  firebaseUrl = $('body').data('firebaseUrl')
+  ref = new Firebase firebaseUrl + 'washrooms'
+  angularFire ref, $scope, "washrooms"
+
+  #$scope.washrooms.push({name: 'Test', state: 'open', id: '1' })
 
   $scope.isOpen = (washroom) ->
     washroom.state == 'open'
 
-
-  (update = ->
-    washroom_update = Washrooms.query(->
-      $scope.washrooms = washroom_update
-      $timeout update, 1000
-    )
-    )()
-
-WashroomCtrl.$inject = ['$scope', '$timeout', 'Washrooms']
+WashroomCtrl.$inject = ['$scope', '$timeout', 'angularFire']
 
