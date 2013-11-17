@@ -2,10 +2,10 @@
   .row-fluid
     .span6{:'ng-repeat' => 'washroom in washrooms'}
       %div.state.open{:'ng-show' => 'isOpen(washroom)'}
-        %div
+        %div.state_text
           %i.icon-thumbs-up.indicator
           {{washroom.name}} washroom is available
       %div.state.closed{:'ng-show' => '!isOpen(washroom)'}
-        %div
+        %div.state_text
           %i.icon-thumbs-down.indicator
           {{washroom.name}} washroom is occupado 
