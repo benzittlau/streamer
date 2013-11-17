@@ -9,9 +9,15 @@ class Washroom < ActiveRecord::Base
 
   def open
     washroom_states.create! state: 'open'
+    commit_to_firebase
   end
 
   def close
     washroom_states.create! state: 'closed'
+    commit_to_firebase
+  end
+
+  def commit_to_firebase
+    Firebase.update("washrooms/#{id}", { :state => state })
   end
 end

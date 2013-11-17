@@ -1,6 +1,7 @@
 Streamer::Application.routes.draw do
   root 'washrooms#index'
 
+  get '/debug' => 'washrooms#index', :debug => true
   resources :washrooms, :only => :index do
     member do
       get 'open'

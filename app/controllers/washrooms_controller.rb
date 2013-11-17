@@ -1,6 +1,8 @@
 class WashroomsController < ApplicationController
   def index
     @washrooms = Washroom.all
+    @debug = params.has_key? :debug
+      
 
     respond_to do |format|
       format.html

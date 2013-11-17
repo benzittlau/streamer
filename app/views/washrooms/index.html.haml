@@ -5,7 +5,17 @@
         %div.state_text
           %i.icon-thumbs-up.indicator
           {{washroom.name}} washroom is available
+        -if @debug
+          %div.debug_links
+            =link_to 'Open', '/washrooms/{{washroom.id}}/open', :remote => true
+            \/
+            =link_to 'Close', '/washrooms/{{washroom.id}}/close', :remote => true
       %div.state.closed{:'ng-show' => '!isOpen(washroom)'}
         %div.state_text
           %i.icon-thumbs-down.indicator
           {{washroom.name}} washroom is occupado 
+        -if @debug
+          %div.debug_links
+            =link_to 'Open', '/washrooms/{{washroom.id}}/open', :remote => true
+            \/
+            =link_to 'Close', '/washrooms/{{washroom.id}}/close', :remote => true
